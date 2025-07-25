@@ -1,7 +1,7 @@
 {
   "background_color": "#000000",
   "description": "Mario vs Luigi",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation":"landscape",
   "icons": [
     {
