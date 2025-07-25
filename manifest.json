@@ -22,6 +22,6 @@
   "name": "Mario vs Luigi",
   "scope": "./",
   "short_name": "Mario vs Luigi",
-  "start_url": "./",
+  "start_url": "./game.html",
   "theme_color": "#000000"
 }
