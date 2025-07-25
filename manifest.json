@@ -22,6 +22,6 @@
   "name": "Mario vs Luigi",
   "scope": "./",
   "short_name": "Mario vs Luigi",
-  "start_url": "http://html-classic.itch.zone/html/14285479/index.html?fullscreen=true",
+  "start_url": "./game.html?fullscreen=true",
   "theme_color": "#000000"
 }
