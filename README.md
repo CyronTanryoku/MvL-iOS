@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Fullscreen support for iOS devices">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NSMB - Mario Vs Luigi Online</title>
+	<link rel="manifest" href="./manifest.json">
+	<link rel="icon" type="image/png" href="https://img.itch.zone/aW1nLzg0NDIxNDkucG5n/32x32%23/I7Nln%2F.png"/>
+	<style>body {background-color: #222222; color: white;}</style>
+    <script>
+        if ('serviceWorker' in navigator) {
+            // Register Service Worker on page load (if not registered before)
+            self.addEventListener('load', async () => {
+                const container = navigator.serviceWorker;
+                container.addEventListener(
+                    'controllerchange',
+                    () => console.log(`SW is changed (installed or removed).`)
+                );
+                if (container.controller === null) {
+                    console.log(`Register new SW for the app.`);
+                    await container.register('sw.js');
+                    console.log(`SW is registered.`);
+                } else console.log(`SW is already registered.`);
+            });
+        }
+    </script>
+</head>
+<body>
+	<img src="title-vector.svg" style="max-width:100%;max-height:100%;"/>
+	<h2>NSMB - Mario Vs Luigi Online</h2>
+<h4>Mobile port by SashaAnt, enable auto run for the best experience.</h4>
+	<ul>
+	<li>A Unity-standalone 2-10 player remake of the Mario vs. Luigi gamemode from the New Super Mario Bros DS download game.
+	<li>Includes the 5 default levels (Grassland, Bricks, Castle, Pipes, and Ice), along with a handful of custom levels to battle on! All power-ups are included and remain faithful to their original counterparts, along with the new addition of the Propeller Suit, Ice Flower, and Hammer Suit!
+</ul>
+	<h3>How to Install</h3>
+	<ol>
+		<li>Visit this page from the device you want to install the game on.</li>
+		<li>Tap the Share button <img src="share.svg" style="width: 32px; height: 32px;" /> in the Safari toolbar.</li>
+		<li>Select "Add to Home Screen" from the options that appear.</li>
+		<li>After adding the game to your home screen, leave Safari and launch the "Mario vs Luigi" app to play the game.</li>
+	</ol>
+	<img src="addToHome.png" style="width: 320px;" />
+	<h3>How to play in browser</h3>
+If you want to play it on a modern HTML5 web browser, <a href="https://sashaant.itch.io/mvlo-mobile">click here</a>. This will take you to SashaAnt's original page with web browser support.
+</body>
+</html>
