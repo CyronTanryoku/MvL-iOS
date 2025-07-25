@@ -5,10 +5,27 @@
     <meta name="description" content="Fullscreen support for iOS devices">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NSMB - Mario Vs Luigi Online</title>
-    <link rel="manifest" href="https://htmlpreview.github.io/?https://github.com/IanSkelskey/minimal-pwa/blob/main/manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="https://static.itch.io/upload_embed.css?1753431036"/>
     <link rel="icon" type="image/png" href="https://img.itch.zone/aW1nLzg0NDIxNDkucG5n/32x32%23/I7Nln%2F.png"/>
     <style>body {background-color: #000000;}</style>
+    <script>
+        if ('serviceWorker' in navigator) {
+            // Register Service Worker on page load (if not registered before)
+            self.addEventListener('load', async () => {
+                const container = navigator.serviceWorker;
+                container.addEventListener(
+                    'controllerchange',
+                    () => console.log(`SW is changed (installed or removed).`)
+                );
+                if (container.controller === null) {
+                    console.log(`Register new SW for the app.`);
+                    await container.register('sw.js');
+                    console.log(`SW is registered.`);
+                } else console.log(`SW is already registered.`);
+            });
+        }
+    </script>
 </head>
 <body class="locale_en upload_embed_layout_widget layout_widget no_theme_toggle" data-host="itch.io" data-page_name="upload_embed"><div class="upload_embed_page page_widget base_widget" id="upload_embed_6335318"><div class="game_frame"><iframe width="100%" height="100%" frameborder="0" allowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" id="game_drop" scrolling="no" src="https://html-classic.itch.zone/html/14285479/index.html"></iframe></div></body>
 </html>
