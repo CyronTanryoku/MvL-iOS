@@ -1,31 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Fullscreen support for iOS devices">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>NSMB - Mario Vs Luigi Online</title>
-	<link rel="manifest" href="./manifest.json">
-	<link rel="icon" type="image/png" href="https://img.itch.zone/aW1nLzg0NDIxNDkucG5n/32x32%23/I7Nln%2F.png"/>
-	<style>body {background-color: #222222; color: white;}</style>
-    <script>
-        if ('serviceWorker' in navigator) {
-            // Register Service Worker on page load (if not registered before)
-            self.addEventListener('load', async () => {
-                const container = navigator.serviceWorker;
-                container.addEventListener(
-                    'controllerchange',
-                    () => console.log(`SW is changed (installed or removed).`)
-                );
-                if (container.controller === null) {
-                    console.log(`Register new SW for the app.`);
-                    await container.register('sw.js');
-                    console.log(`SW is registered.`);
-                } else console.log(`SW is already registered.`);
-            });
-        }
-    </script>
-</head>
 <body>
 	<img src="title-vector.svg" style="max-width:100%;max-height:100%;"/>
 	<h2>NSMB - Mario Vs Luigi Online</h2>
