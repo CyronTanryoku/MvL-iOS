@@ -15,6 +15,9 @@
 		<li>If it doesn't automatically open, open the Shortcuts app.</li>
 		<li>Select "Make App from Web URL" shortcut, set the name to "Mario vs Luigi".</li>
 		<li>Copy and paste <a href="https://html-classic.itch.zone/html/14422388/index.html">this URL</a>, and use <a href="./img/favicon-512.png">this image</a> for the icon.</li>
+		<li>The shortcut will create the configuration profile and ask you to download it. Tap "Allow" then "Close."</li>
+		<li>Open Settings. You may see a "Profile Downloaded" option near the top of the main Settings view, which you can tap on to take you right there. If not, head to Settings » General » VPN & Device Management, then tap the name of your downloaded profile.</li>
+		<li>Tap on "Install" at the top right, then enter your passcode when prompted.</li>
 		<li>Return to Home Screen and launch the "Mario vs Luigi" app to play the game.</li>
 	</ol>
 	<h3>How to Install (Quick Method) - No Save Enabled</h3>
